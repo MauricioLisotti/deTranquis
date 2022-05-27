@@ -51,6 +51,8 @@ public class PropietarioServiceImpl implements PropietarioService {
         if (propietarioRepository.findById(num).isPresent()) {
             Propietario propietarioToUpdate = new Propietario();
             propietarioToUpdate.setIdProp(propietarioUpdated.getIdProp());
+            propietarioToUpdate.setNombreUsuario(propietarioUpdated.getNombreUsuario());
+            propietarioToUpdate.setClave(propietarioUpdated.getClave());
             propietarioToUpdate.setNombreProp(propietarioUpdated.getNombreProp());
             propietarioToUpdate.setApellidoProp(propietarioUpdated.getApellidoProp());
             propietarioToUpdate.setTelefonoProp(propietarioUpdated.getTelefonoProp());

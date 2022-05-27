@@ -10,32 +10,29 @@ import javax.persistence.Table;
 
 import lombok.*;
 
-@AllArgsConstructor
-@NoArgsConstructor
+@Data
 @Entity
 @Table(name = "propietario")
 
 public class Propietario {
 
     @Id
-    @Getter
-    @Setter
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     Long idProp;
 
-    @Getter
-    @Setter
+    @Column(name = "NOMBREUSUARIO")
+    String nombreUsuario;
+
+    @Column(name = "CLAVE")
+    String clave;
+
     @Column(name = "NOMBRE")
     String nombreProp;
 
-    @Getter
-    @Setter
     @Column(name = "APELLIDO")
     String apellidoProp;
 
-    @Getter
-    @Setter
     @Column(name = "TELEFONO")
     String telefonoProp;
 }

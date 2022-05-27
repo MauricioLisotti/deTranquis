@@ -26,7 +26,6 @@ public class BarServiceImpl implements BarService {
     public Optional<Bar> findBarById(Long id) {
         Optional<Bar> bar = barRepository.findById(id);
         return bar;
-
     }
 
     @Override

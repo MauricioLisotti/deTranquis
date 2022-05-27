@@ -1,7 +1,10 @@
 package com.TeamProject.deTranquis.model;
 
+import com.sun.istack.NotNull;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,38 +14,29 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
+@Data
 @Table(name = "usuario")
 public class Usuario {
 
+    @Autowired
+
     @Id
-    @Getter
-    @Setter
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    Long idUsuario;
+    Long id;
 
-    @Getter
-    @Setter
     @Column(name = "nickname")
-    String nicknameUsuario;
+    String nickname;
 
-    @Getter
-    @Setter
     @Column(name = "clave")
-    String claveUsuario;
+    String clave;
 
-    @Getter
-    @Setter
     @Column(name = "nombre")
-    String nombreUsuario;
+    String nombre;
 
-    @Getter
-    @Setter
     @Column(name = "apellido")
-    String apellidoUsuario;
+    String apellido;
 
-    @Getter
-    @Setter
     @Column(name = "correo")
-    String correoUsuario;
+    String correo;
 }

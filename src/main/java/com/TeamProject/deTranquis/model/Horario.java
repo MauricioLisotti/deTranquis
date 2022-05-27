@@ -10,32 +10,24 @@ import javax.persistence.Table;
 
 import lombok.*;
 
-
-@NoArgsConstructor
-@AllArgsConstructor
+@Data
 @Entity
 @Table (name="horario")
 public class Horario {
 
     @Id
-    @Getter
-    @Setter
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID")
     Long idHorario;
 
-    @Getter
-    @Setter
+
     @Column(name="DIA")
     String dia;
 
-    @Getter
-    @Setter
+
     @Column(name="HORARIOAPERTURA")
     String horarioApertura;
 
-    @Getter
-    @Setter
     @Column(name="HORARIOCIERRE")
     String horarioCierre;
 }

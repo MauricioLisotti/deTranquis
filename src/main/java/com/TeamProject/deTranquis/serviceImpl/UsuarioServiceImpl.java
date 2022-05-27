@@ -48,14 +48,14 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public String updateUsuario(Usuario usuarioUpdated) {
-        Long num = usuarioUpdated.getIdUsuario();
+        Long num = usuarioUpdated.getId();
         if (usuarioRepository.findById(num).isPresent()) {
             Usuario usuarioToUpdate = new Usuario();
-            usuarioToUpdate.setIdUsuario(usuarioUpdated.getIdUsuario());
-            usuarioToUpdate.setNicknameUsuario(usuarioUpdated.getNicknameUsuario());
-            usuarioToUpdate.setNombreUsuario(usuarioUpdated.getNombreUsuario());
-            usuarioToUpdate.setApellidoUsuario(usuarioUpdated.getApellidoUsuario());
-            usuarioToUpdate.setCorreoUsuario(usuarioUpdated.getCorreoUsuario());
+            usuarioToUpdate.setId(usuarioUpdated.getId());
+            usuarioToUpdate.setNickname(usuarioUpdated.getNickname());
+            usuarioToUpdate.setNombre(usuarioUpdated.getNombre());
+            usuarioToUpdate.setApellido(usuarioUpdated.getApellido());
+            usuarioToUpdate.setCorreo(usuarioUpdated.getCorreo());
 
             usuarioRepository.save(usuarioToUpdate);
             return "Usuario modificado";

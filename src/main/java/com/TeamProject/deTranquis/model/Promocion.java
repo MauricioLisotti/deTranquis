@@ -10,36 +10,26 @@ import javax.persistence.Table;
 
 import lombok.*;
 
-@NoArgsConstructor
-@AllArgsConstructor
+@Data
 @Entity
 @Table (name = "promocion")
 public class Promocion {
 
     @Id
-    @Getter
-    @Setter
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID")
     Long idPromocion;
 
-    @Getter
-    @Setter
     @Column(name="TITULO")
     String titulo;
 
-    @Getter
-    @Setter
     @Column(name="DESCRIPCION")
     String descripcion;
 
-    @Getter
-    @Setter
     @Column(name="URL_IMAGEN")
     String urlImagen;
 
-    @Getter
-    @Setter
     @Column(name="ID_BAR")
     String idBar;
 }
