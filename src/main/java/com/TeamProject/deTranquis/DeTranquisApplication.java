@@ -10,4 +10,5 @@ public class DeTranquisApplication {
 		SpringApplication.run(DeTranquisApplication.class, args);
 	}
 
+
 }
