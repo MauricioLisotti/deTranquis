@@ -2,12 +2,15 @@ package com.TeamProject.deTranquis.controllersImpl;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Level;
+
 import com.TeamProject.deTranquis.controllers.BarController;
 import com.TeamProject.deTranquis.model.Bar;
 import com.TeamProject.deTranquis.service.BarService;
+import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+@Log
 @CrossOrigin
 @RestController
 public class BarControllerImpl implements BarController {
@@ -28,6 +31,7 @@ public class BarControllerImpl implements BarController {
     public Optional<Bar> getBarById(@PathVariable Long id) {
         return barService.findBarById(id);
     }
+
 
     // http://localhost:8888/bar/add (ADD)
     @Override

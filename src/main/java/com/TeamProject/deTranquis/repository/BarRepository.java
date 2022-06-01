@@ -1,5 +1,6 @@
 package com.TeamProject.deTranquis.repository;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.TeamProject.deTranquis.model.Bar;

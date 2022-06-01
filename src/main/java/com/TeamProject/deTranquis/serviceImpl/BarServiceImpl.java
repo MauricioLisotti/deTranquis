@@ -1,14 +1,17 @@
 package com.TeamProject.deTranquis.serviceImpl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
+import java.util.stream.Collectors;
+import java.sql.*;
 import com.TeamProject.deTranquis.model.Bar;
 import com.TeamProject.deTranquis.repository.BarRepository;
 import com.TeamProject.deTranquis.service.BarService;
+import org.hibernate.mapping.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Service
@@ -21,6 +24,7 @@ public class BarServiceImpl implements BarService {
     public List<Bar> findAllBars() {
         return barRepository.findAll();
     }
+
 
     @Override
     public Optional<Bar> findBarById(Long id) {
@@ -44,6 +48,7 @@ public class BarServiceImpl implements BarService {
         }
         return "Error! El bar no existe";
     }
+
 
     @Override
     public String updateBar(Bar barUpdated) {
